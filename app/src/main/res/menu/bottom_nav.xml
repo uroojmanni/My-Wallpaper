@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/catogory_fragment"
+        android:icon="@drawable/catogry"
+        android:title="Categories" />
+    <item
+        android:id="@+id/favourite_fragment"
+        android:icon="@drawable/heart"
+        android:title="Favorite" />
+</menu>

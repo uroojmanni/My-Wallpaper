@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_nav"
+    app:startDestination="@id/catogory_fragment">
+
+    <fragment
+        android:id="@+id/catogory_fragment"
+        android:name="com.example.wallpaper_app.Fragments.Catogory_fragment"
+        android:label="fragment_catogory_fragment"
+        tools:layout="@layout/fragment_catogory_fragment" >
+        <action
+            android:id="@+id/action_catogory_fragment_to_preview_Fragment2"
+            app:destination="@id/preview_Fragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/favourite_fragment"
+        android:name="com.example.wallpaper_app.Fragments.Favourite_fragment"
+        android:label="fragment_favourite_fragment"
+        tools:layout="@layout/fragment_favourite_fragment" >
+        <action
+            android:id="@+id/action_favourite_fragment_to_setWallpaper_fragment2"
+            app:destination="@id/setWallpaper_fragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/preview_Fragment2"
+        android:name="com.example.wallpaper_app.Fragments.Preview_Fragment"
+        android:label="fragment_preview_"
+        tools:layout="@layout/fragment_preview_" >
+        <action
+            android:id="@+id/action_preview_Fragment2_to_setWallpaper_fragment2"
+            app:destination="@id/setWallpaper_fragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/setWallpaper_fragment2"
+        android:name="com.example.wallpaper_app.Fragments.SetWallpaper_fragment"
+        android:label="fragment_set_wallpaper_fragment"
+        tools:layout="@layout/fragment_set_wallpaper_fragment" />
+</navigation>

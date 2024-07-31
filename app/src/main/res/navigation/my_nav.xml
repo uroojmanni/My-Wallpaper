@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splash_Fragment">
+
+    <!-- Splash Fragment -->
+    <fragment
+        android:id="@+id/splash_Fragment"
+        android:name="com.example.wallpaper_app.Fragments.Splash_Fragment"
+        android:label="Splash Fragment"
+        tools:layout="@layout/fragment_splash_">
+        <action
+            android:id="@+id/action_splash_Fragment_to_main_fragment"
+            app:destination="@id/main_fragment" />
+    </fragment>
+
+    <!-- Main Fragment with Bottom Navigation -->
+    <fragment
+        android:id="@+id/main_fragment"
+        android:name="com.example.wallpaper_app.Fragments.Main_fragment"
+        android:label="Main Fragment"
+        tools:layout="@layout/fragment_main_fragment">
+        <action
+            android:id="@+id/action_main_fragment_to_category_fragment"
+            app:destination="@id/catogory_fragment" />
+        <action
+            android:id="@+id/action_main_fragment_to_favorite_fragment"
+            app:destination="@id/favourite_fragment" />
+    </fragment>
+
+    <!-- Category Fragment -->
+    <fragment
+        android:id="@+id/catogory_fragment"
+        android:name="com.example.wallpaper_app.Fragments.Catogory_fragment"
+        android:label="Category Fragment"
+        tools:layout="@layout/fragment_catogory_fragment">
+        <action
+            android:id="@+id/action_catogory_fragment_to_preview_Fragment"
+            app:destination="@id/preview_Fragment" />
+    </fragment>
+
+    <!-- Preview Fragment -->
+    <fragment
+        android:id="@+id/preview_Fragment"
+        android:name="com.example.wallpaper_app.Fragments.Preview_Fragment"
+        android:label="Preview Fragment"
+        tools:layout="@layout/fragment_preview_" >
+        <action
+            android:id="@+id/action_preview_Fragment_to_setWallpaper_fragment"
+            app:destination="@id/setWallpaper_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/setWallpaper_fragment"
+        android:name="com.example.wallpaper_app.Fragments.SetWallpaper_fragment"
+        android:label="fragment_set_wallpaper_fragment"
+        tools:layout="@layout/fragment_set_wallpaper_fragment" />
+</navigation>
